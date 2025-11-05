@@ -1,0 +1,28 @@
+# robots.txt for FinCalcBox
+# Place this file at: /public/robots.txt
+# Note: keep the sitemap URL matching your canonical domain (www or non-www)
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Default rule for all other crawlers
+User-agent: *
+Allow: /
+
+# If you have any admin or staging routes you do NOT want indexed,
+# uncomment and adjust these lines:
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /staging/
+
+# Sitemap - ensure this matches your live domain (use www or non-www consistently)
+Sitemap: https://fincalcbox.com/sitemap.xml

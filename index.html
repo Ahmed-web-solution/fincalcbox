@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ✅ Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🔒 Security Headers (CSP only in HTML; other headers via server) -->
+    
+    <!-- ✅ Canonical will be injected per-route by SEOHelmet -->
+
+    <!-- ✅ Page Title & Description -->
+    <title>FinCalcBox – Every Calculation Counts</title>
+    <meta
+      name="description"
+      content="Track, analyze, and grow your wealth effortlessly with FinCalcBox. Powerful financial tools and insights for better money management."
+    />
+    <meta name="keywords" content="financial calculator, loan calculator, mortgage calculator, currency converter, EMI calculator, income tax calculator, compound interest calculator, finance tools, online calculator">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Ahmed Raza" />
+
+    <!-- ✅ Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="FinCalcBox – Every Calculation Counts" />
+    <meta
+      property="og:description"
+      content="Track, analyze, and grow your wealth effortlessly with FinCalcBox — powerful financial tools for smarter money management."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FinCalcBox" />
+    <meta property="og:url" content="https://fincalcbox.com" />
+    <meta property="og:image" content="https://fincalcbox.com/og-image.png" />
+
+    <!-- ✅ Twitter (X) Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@FinCalcBox" />
+    <meta
+      name="twitter:title"
+      content="FinCalcBox – Every Calculation Counts"
+    />
+    <meta
+      name="twitter:description"
+      content="Track, analyze, and grow your wealth effortlessly with FinCalcBox — smarter tools for better financial management."
+    />
+    <meta name="twitter:image" content="https://fincalcbox.com/og-image.png" />
+
+    <!-- ✅ Icons & Manifest -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icons/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/icons/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- 🚀 Header logo uses fetchpriority=high in component; no preload needed -->
+
+    <!-- ✅ Strict CSP (meta for dev/preview). For production, set via server headers. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://open.er-api.com https://api.exchangerate-api.com https://api.emailjs.com https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+    
+    <!-- ✅ Critical CSS Inline -->
+    <style>
+      /* Critical CSS to prevent FOUC */
+      body { 
+        margin: 0; 
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background-color: hsl(210 40% 96%);
+        color: hsl(222 47% 11%);
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+      .dark body { 
+        background-color: hsl(222 47% 11%); 
+        color: hsl(210 40% 98%); 
+      }
+      #root { min-height: 100vh; }
+      * { box-sizing: border-box; }
+    </style>
+    
+    <!-- CSS handled by Vite; avoid invalid /src preload in production -->
+
+    <!-- ✅ Preconnect & Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link id="gf-inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+    
+
+    <!-- 📊 Google Analytics 4 (GA4) -->
+    <script src="/analytics.js" defer></script>
+    <script src="/fonts-init.js" defer></script>
+    
+
+
+    <!-- 🔍 Google Search Console Verification (Add your verification code) -->
+    <meta name="google-site-verification" content="_-5QMi-NGZgsXf6_FRnUW8nlnmKat2I9CkcTsIsBLxc" />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- ✅ Main App Script -->
+    <script type="module" src="/src/main.tsx" defer></script>
+  </body>
+</html>
