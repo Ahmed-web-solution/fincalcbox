@@ -9,7 +9,7 @@ import { imagetools } from "vite-imagetools";
 import viteImagemin from "vite-plugin-imagemin";
 
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "",
   server: {
     host: "::",
     port: 8080,
