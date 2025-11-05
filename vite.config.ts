@@ -9,6 +9,7 @@ import { imagetools } from "vite-imagetools";
 import viteImagemin from "vite-plugin-imagemin";
 
 export default defineConfig(({ mode }) => ({
+  base: "/",
   server: {
     host: "::",
     port: 8080,
@@ -64,6 +65,7 @@ export default defineConfig(({ mode }) => ({
   },
 
   build: {
+    outDir: "dist",
     minify: "terser",
     cssCodeSplit: true,
     chunkSizeWarningLimit: 1000,
