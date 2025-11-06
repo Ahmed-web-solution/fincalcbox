@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import NeuButton from "@/components/NeuButton";
 import SEOHelmet from "@/components/SEOHelmet";
 // import AdPlaceholder from "@/components/AdPlaceholder";
-import { ArrowRight ,TrendingUp,Calculator,Globe,Receipt} from "@/components/icons";
-import {  lazy, Suspense } from "react";
+import { ArrowRight, TrendingUp, Calculator, Globe, Receipt } from "@/components/icons";
+import { lazy, Suspense } from "react";
 
 // Lazily load heavy below-the-fold sections to reduce LCP and JS on initial route
 const FeaturesSection = lazy(() => import("@/sections/FeaturesSection"));
@@ -14,7 +14,7 @@ const NewsletterSection = lazy(() => import("@/sections/NewsletterSection"));
 // CTA section temporarily disabled to keep initial route minimal
 
 export default function Home() {
-  
+
 
   // ✅ JSON-LD structured data - Combined WebSite + Organization schema for maximum SERP visibility
   // 📊 This dual schema helps Google understand both the website AND the business entity
@@ -88,7 +88,7 @@ export default function Home() {
       {/* Hero Section with Background - keep minimal for fast LCP */}
       <section className="relative overflow-hidden py-20 md:py-28 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
-        <div className="absolute inset-0 opacity-30"/>
+        <div className="absolute inset-0 opacity-30" />
 
         <div className="mx-auto max-w-7xl relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -104,20 +104,24 @@ export default function Home() {
                 Track, Analyze, and Grow your wealth effortlessly with our comprehensive suite of financial calculators and tools.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
-                
+
                 <NavLink to="/tools" className="btn-primary" aria-label="Explore all financial tools at FinCalcBox"><NeuButton
-                variant="primary"
-                size="lg"
-                className="flex items-center justify-center gap-2 group transition-all duration-200"
-              >
-                <span>Explore Tools</span>
-                <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </NeuButton></NavLink>
-                <NavLink to="/about">
+                  variant="primary"
+                  size="lg"
+                  className="flex items-center justify-center gap-2 group transition-all duration-200"
+                >
+                  <span>Explore Tools</span>
+                  <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
+                </NeuButton></NavLink>
+                <NavLink
+                  to="/about"
+                  aria-label="Learn more about FinCalcBox and our financial tools"
+                >
                   <NeuButton size="lg">
                     Learn More
                   </NeuButton>
                 </NavLink>
+
               </div>
             </div>
             <div className="hidden lg:block animate-scale-in">
@@ -146,30 +150,30 @@ export default function Home() {
         </div>
       </section>
 
-      
+
 
       {/* <AdPlaceholder position="top" className="mx-6" /> */}
 
-      <Suspense fallback={<div style={{height: 400}} />}> 
+      <Suspense fallback={<div style={{ height: 400 }} />}>
         <FeaturesSection />
       </Suspense>
 
-      <Suspense fallback={<div style={{height: 500}} />}> 
+      <Suspense fallback={<div style={{ height: 500 }} />}>
         <PopularToolsSection />
       </Suspense>
 
-      <Suspense fallback={<div style={{height: 600}} />}> 
+      <Suspense fallback={<div style={{ height: 600 }} />}>
         <BlogPreviewSection />
       </Suspense>
 
-      <Suspense fallback={<div style={{height: 380}} />}> 
+      <Suspense fallback={<div style={{ height: 380 }} />}>
         <NewsletterSection />
       </Suspense>
 
       {/* <AdPlaceholder position="bottom" className="mx-6 mb-8" /> */}
 
       {/* CTA section intentionally omitted here */}
-      <Suspense fallback={<div style={{height: 380}} />}> 
+      <Suspense fallback={<div style={{ height: 380 }} />}>
         <CtaSection />
       </Suspense>
     </div>
