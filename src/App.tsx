@@ -8,6 +8,8 @@ import { lazy, Suspense } from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import MainLayout from "@/layouts/MainLayout";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 // Double-check: no unused direct page imports; all are lazy-loaded. Remove any legacy imports.
 
@@ -89,6 +91,7 @@ const App = () => (
       <ThemeProvider>
           <IdleSonner />
           <BrowserRouter>
+          <ScrollToTop />
             <ErrorBoundary>
               <Suspense
                 fallback={
