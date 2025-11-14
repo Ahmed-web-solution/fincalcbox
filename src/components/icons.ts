@@ -107,4 +107,8 @@ export const iconMap = {
   Target: () => import('lucide-react/dist/esm/icons/target.js'),
   Users: () => import('lucide-react/dist/esm/icons/users.js'),
   Award: () => import('lucide-react/dist/esm/icons/award.js'),
+  PiggyBank: () => import('lucide-react/dist/esm/icons/piggy-bank.js'),
+  DollarSign: () => import('lucide-react/dist/esm/icons/dollar-sign.js'),
+  Clock: () => import('lucide-react/dist/esm/icons/clock.js'),
+  FileText: () => import('lucide-react/dist/esm/icons/file-text.js'),
 } as const;
