@@ -3,23 +3,7 @@
     {
       "source": "/:path*",
       "has": [
-        { "type": "host", "value": "fincalcbox.com" }
-      ],
-      "destination": "https://fincalcbox.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
         { "type": "host", "value": "www.fincalcbox.com" }
-      ],
-      "destination": "https://fincalcbox.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        { "type": "protocol", "value": "http" }
       ],
       "destination": "https://fincalcbox.com/:path*",
       "permanent": true
