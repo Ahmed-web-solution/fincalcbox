@@ -1,12 +1,18 @@
 {
   "redirects": [
     {
-      "source": "http://fincalcbox.com/:path*",
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "fincalcbox.com" }
+      ],
       "destination": "https://fincalcbox.com/:path*",
       "permanent": true
     },
     {
-      "source": "https://www.fincalcbox.com/:path*",
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.fincalcbox.com" }
+      ],
       "destination": "https://fincalcbox.com/:path*",
       "permanent": true
     }
