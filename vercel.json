@@ -43,7 +43,7 @@
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://fincalcbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fincalcbox.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.exchangerate-api.com https://open.er-api.com https://api.fincalcbox.com https://www.google-analytics.com https://api.emailjs.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+          "value": "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://fincalcbox.com https://fincalcbox-u4cc.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fincalcbox.com https://fincalcbox-u4cc.vercel.app; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.exchangerate-api.com https://open.er-api.com https://api.fincalcbox.com https://www.google-analytics.com https://api.emailjs.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
         }
       ]
     }
