@@ -52,7 +52,12 @@
 
     <!-- 🚀 Header logo uses fetchpriority=high in component; no preload needed -->
 
-    <!-- ✅ CSP served via vercel.json headers in production -->
+    <!-- ✅ Strict CSP (meta for dev/preview). For production, set via server headers. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fincalcbox.com https://www.fincalcbox.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fincalcbox.com https://www.fincalcbox.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://fincalcbox.com https://www.fincalcbox.com; connect-src 'self' https://fincalcbox.com https://www.fincalcbox.com https://open.er-api.com https://api.exchangerate-api.com https://api.emailjs.com https://api.fincalcbox.com https://www.google-analytics.com; manifest-src 'self' https://fincalcbox.com https://www.fincalcbox.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+    />
+    
     <!-- ✅ Critical CSS Inline -->
     <style>
       /* Critical CSS to prevent FOUC */
