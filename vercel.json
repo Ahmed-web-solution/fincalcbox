@@ -1,0 +1,56 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.fincalcbox.com" }
+      ],
+      "destination": "https://fincalcbox.com/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/icons/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js|png|jpg|jpeg|svg|webp|woff2?)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' https://fincalcbox.com https://www.fincalcbox.com; img-src 'self' data: https://fincalcbox.com https://www.fincalcbox.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fincalcbox.com https://www.fincalcbox.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.emailjs.com; script-src-elem 'self' https://fincalcbox.com https://www.fincalcbox.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fincalcbox.com https://www.fincalcbox.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://fincalcbox.com https://www.fincalcbox.com; font-src 'self' https://fonts.gstatic.com https://fincalcbox.com https://www.fincalcbox.com; connect-src 'self' https://fincalcbox.com https://www.fincalcbox.com https://api.exchangerate-api.com https://open.er-api.com https://api.fincalcbox.com https://api.emailjs.com https://www.google-analytics.com; manifest-src 'self' https://fincalcbox.com https://www.fincalcbox.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/:path*", "destination": "/index.html" }
+  ]
+}
