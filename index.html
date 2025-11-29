@@ -44,16 +44,15 @@
     <meta name="twitter:image" content="https://fincalcbox.com/og-image.png" />
 
     <!-- ✅ Icons & Manifest -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icons/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="/icons/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="https://fincalcbox.com/favicon.ico" sizes="any" />
+    <link rel="icon" href="https://fincalcbox.com/icons/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="https://fincalcbox.com/icons/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="https://fincalcbox.com/icons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="https://fincalcbox.com/manifest.json" />
 
     <!-- 🚀 Header logo uses fetchpriority=high in component; no preload needed -->
 
-    <!-- ✅ Strict CSP (meta for dev/preview). For production, set via server headers. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://open.er-api.com https://api.exchangerate-api.com https://api.emailjs.com https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+    <!-- ✅ CSP is handled via Vercel headers in vercel.json (removed meta tag to avoid conflicts) -->
     
     <!-- ✅ Critical CSS Inline -->
     <style>
